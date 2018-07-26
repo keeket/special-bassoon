@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<!-- zie ook eens de mvn sidebar in intellij voor mvn lifecycles en plugin goals :D -->
 
@@ -8,7 +7,7 @@
 
 	<groupId>springcourse</groupId>
 	<artifactId>petclinic</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
     <modules>
         <module>petclinic-data</module>
 		<module>petclinic-web</module>
@@ -23,7 +22,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.0.3.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -53,7 +52,8 @@
 	<!-- koppeling voor release tags richting versiebeheer -->
 	<scm>
 		<developerConnection>scm:git:git@github.com:keeket/special-bassoon.git</developerConnection>
-	</scm>
+	  <tag>petclinic-0.0.1</tag>
+  </scm>
 
 
 </project>
