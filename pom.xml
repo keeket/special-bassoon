@@ -42,7 +42,7 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<configuration>
 					<goals>install</goals>
-					<!-- ga akkoord met versie increment defaults met true -->
+					<!-- ga akkoord met versie increment defaults met true voor submodules -->
 					<autoVersionSubmodules>false</autoVersionSubmodules>
 				</configuration>
 			</plugin>
