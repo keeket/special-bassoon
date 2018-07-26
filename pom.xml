@@ -7,7 +7,7 @@
 
 	<groupId>springcourse</groupId>
 	<artifactId>petclinic</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
     <modules>
         <module>petclinic-data</module>
 		<module>petclinic-web</module>
@@ -52,7 +52,7 @@
 	<!-- koppeling voor release tags richting versiebeheer -->
 	<scm>
 		<developerConnection>scm:git:git@github.com:keeket/special-bassoon.git</developerConnection>
-	  <tag>petclinic-0.0.1</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 
