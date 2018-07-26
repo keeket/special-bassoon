@@ -10,6 +10,5 @@ public class PetType {
 
     public void setName(String name) {
         this.name = name;
-        
     }
 }
