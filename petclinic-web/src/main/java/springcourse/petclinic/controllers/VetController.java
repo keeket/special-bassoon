@@ -9,5 +9,5 @@ public class VetController {
     @RequestMapping({"vet", "vet/", "vet/index", "vet/index.html"})
     public String vetList() {
         return "vet/index";
-    } 
+    }
 }
