@@ -6,8 +6,6 @@ import springcourse.petclinic.model.Owner;
 import springcourse.petclinic.model.Vet;
 import springcourse.petclinic.services.OwnerService;
 import springcourse.petclinic.services.VetService;
-import springcourse.petclinic.services.map.OwnerServiceMap;
-import springcourse.petclinic.services.map.VetServiceMap;
 
 // doordat de klasse een bean is wordt automatisch de run methode aangeroepen wanneer de klasse geinitialisserd wordt
 @Component
@@ -16,9 +14,12 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    // service injectie door de spring container ipv constructor instantiering daarnaast is dit ook flexibeler omdat de interface
+    // wordt gebruikt en geen concrete klasse
+    // Ondanks dat de services in een andere map staan komt de packagenaam in beide projecten overeen en daardoor vindbaar voor spring
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     // argumenten van de commandline worden in feite niet gebruikt, dit is enkel een manier om bij opstarten automstisch
