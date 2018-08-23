@@ -5,6 +5,25 @@
     <title>Owners index page</title>
 </head>
 <body>
+    <!-- hiermee kan aan intellij aangeduid worden welke klasse er bedoeld wordt maar is volgens mij niet noodzakelijk -->
+    <!--/*@thymesVar id="owner" type="springcourse.petclinic.model.Owner"*/-->
     <h1 th:text="'List of owners'">Owners list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First name</th>
+                <th>Last name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="owner : ${owners}">
+                <td th:text="${owner.id}">1</td>
+                <td th:text="${owner.firstName}">Joe</td>
+                <td th:text="${owner.lastName}">Buck</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
